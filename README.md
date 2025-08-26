@@ -81,8 +81,8 @@ If you use MoxiFL in your research, please cite:
 ```bibtex
 @software{moxifl2024,
   title={MoxiFL: A Flexible Federated Learning Framework},
-  author={[Your Name]},
-  year={2024},
+  author={SGibson},
+  year={2025},
   url={https://github.com/SabGibson/MoxiFL}
 }
 ```
