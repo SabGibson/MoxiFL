@@ -66,14 +66,6 @@ MoxiFL is built around four core building blocks:
 3. **Node**: Represents individual participants in the federated learning process
 4. **Trainer**: Handles local training and coordinates with the federated network
 
-## Contributing
-
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to MoxiFL.
-
-## License
-
-[Add your license information here]
-
 ## Citation
 
 If you use MoxiFL in your research, please cite:
