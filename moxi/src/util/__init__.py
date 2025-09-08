@@ -1,3 +1,3 @@
-from .pytroch_util import LinearModel, create_dataloader, is_trained
+from .util import star_network_dict, random_network_dict
 
-__all__ = ["LinearModel", "create_dataloader", "is_trained"]
+__all__ = ["star_network_dict", "random_network_dict"]
