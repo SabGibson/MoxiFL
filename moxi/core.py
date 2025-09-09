@@ -49,12 +49,18 @@ DIRCILET_TARGETS = {
 
 
 def test_data_builder(config: dict):
-    partitioner = DirichletPartitioner(
-        alpha=config["experiment_config"]["alpha"],
-        num_partitions=config["network_size"],
-        partition_by=DIRCILET_TARGETS[config["experiment_config"]["task"]],
-        seed=44,
-    )
+    if isinstance(config["experiment_config"]["partitioner"], DirichletPartitioner):
+        partitioner = DirichletPartitioner(
+            alpha=config["experiment_config"]["alpha"],
+            num_partitions=config["network_size"],
+            partition_by=DIRCILET_TARGETS[config["experiment_config"]["task"]],
+            seed=44,
+        )
+    else:
+        partitioner = config["experiment_config"]["partitioner"](
+            **config["experiment_config"]["partitioner_params"]
+        )
+        
     train_loaders, test_loader = datamaker(
         task=config["experiment_config"]["task"],
         partitioner=partitioner,
